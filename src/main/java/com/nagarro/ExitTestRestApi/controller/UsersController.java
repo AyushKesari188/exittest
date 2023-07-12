@@ -21,6 +21,12 @@ public class UsersController {
 	@Autowired
 	UsersRepository usersRepository;
 
+	//Get status
+        @GetMapping({"/","/status"})
+        public String getStatus() {
+            return "Statuss: Application is Running";
+        }
+	
 	@PostMapping(path = "/users", consumes = { "application/json" })
 	public ResponseEntity<Object> addUsers(@RequestBody Users user) {
 		try {
