@@ -22,10 +22,10 @@ public class UsersController {
 	UsersRepository usersRepository;
 
 	//Get status
-        @GetMapping({"/","/status"})
-        public String getStatus() {
-            return "Statuss: Application is Running";
-        }
+        // @GetMapping({"/","/status"})
+        // public String getStatus() {
+        //     return "Statuss: Application is Running";
+        // }
 	
 	@PostMapping(path = "/users", consumes = { "application/json" })
 	public ResponseEntity<Object> addUsers(@RequestBody Users user) {
